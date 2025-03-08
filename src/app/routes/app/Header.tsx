@@ -25,7 +25,7 @@ const Header: FC = () => {
       <NavigationMenu>
         <NavigationMenuList>
           {components.map((c) => (
-            <NavigationMenuItem>
+            <NavigationMenuItem key={"navbar-item-" + c.href}>
               <NavigationMenuLink
                 className="text-lg cursor-pointer"
                 href={c.href}

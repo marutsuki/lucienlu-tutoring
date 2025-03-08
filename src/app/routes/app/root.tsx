@@ -1,13 +1,12 @@
 import { FC } from "react";
 import { Outlet } from "react-router";
-import Header from "./Header";
+import AppLayout from "./AppLayout";
 
 const Root: FC = () => {
   return (
-    <>
-      <Header />
+    <AppLayout>
       <Outlet />
-    </>
+    </AppLayout>
   );
 };
 
