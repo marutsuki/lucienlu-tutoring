@@ -1,76 +1,104 @@
-import clsx from "clsx";
+import { Separator } from "@/components/ui/separator";
 import { FC, ReactNode } from "react";
-import { FaAngular, FaJsSquare, FaPython } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
-import { FaGolang } from "react-icons/fa6";
-import { SiJavascript, SiScratch, SiTypescript } from "react-icons/si";
-import { TbSql } from "react-icons/tb";
+import { FaBookOpen, FaCheck } from "react-icons/fa";
+import { RiFeedbackFill } from "react-icons/ri";
+import { MdOutlineSentimentSatisfied } from "react-icons/md";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import { Button } from "@/components/ui/button";
 
 type Component = {
-  title: string;
+  label: string;
+  points: string[];
   icon: ReactNode;
+  bulletIcon: ReactNode;
 };
 
-const components: Component[] = [
+const threeRs: Component[] & { length: 3 } = [
   {
-    title: "Angular",
-    icon: <FaAngular size="96" color="#e36752" />,
+    label: "Reliable",
+    points: [
+      "Open communication with students + parents/guardians",
+      "Priority of and dedication into tutorial prep work",
+      "Enrollment limits set to focus on existing students",
+    ],
+    icon: <MdOutlineSentimentSatisfied size="36" />,
+    bulletIcon: <FaCheck />,
   },
   {
-    title: "React",
-    icon: <FaReact size="96" color="aqua" />,
+    label: "Resourceful",
+    points: [
+      "Self-crafted learning materials",
+      "Externally resourced learning materials",
+      "Tailored learning materials for every student",
+    ],
+    icon: <FaBookOpen size="36" />,
+    bulletIcon: <FaCheck />,
   },
   {
-    title: "Java 21",
-    icon: <FaJava size="96" color="orange" />,
-  },
-  {
-    title: "Golang",
-    icon: <FaGolang size="96" color="#34b7eb" />,
-  },
-  {
-    title: "SQL (Postgres)",
-    icon: <TbSql size="96" color="gray" />,
-  },
-  {
-    title: "Python",
-    icon: <FaPython size="96" color="gray" />,
-  },
-  {
-    title: "JavaScript",
-    icon: <SiJavascript size="96" color="#F0DB4F" />,
-  },
-  {
-    title: "TypeScript",
-    icon: <SiTypescript size="96" color="#4993e3" />,
+    label: "Responsive",
+    points: [
+      "Out of teaching hours contact and support",
+      "Emergency classes available (addressed case by case)",
+      "Early notice of scheduling changes and conflicts",
+    ],
+    icon: <RiFeedbackFill size="36" />,
+    bulletIcon: <FaCheck />,
   },
 ];
 const Home: FC = () => {
   return (
-    <>
-      <h1 className="text-2xl">Tutoring Services</h1>
-      <h2 className="text-lg">Software Development and Coding</h2>
-      <div className="grid grid-cols-2 grid-auto-rows gap-4 m-4">
-        {components.map((c, i) => (
-          <div
-            className={clsx(
-              "border p-4 rounded-lg shadow-md flex items-center gap-8 justify-between",
-              clsx({
-                "flex-row": i % 2 === 1,
-                "flex-row-reverse": i % 2 === 0,
-                "animate-slidein": i % 2 === 1,
-                "animate-slidein-right": i % 2 === 0,
-              })
-            )}
-          >
-            <hr />
-            <h2 className="text-xl">{c.title} </h2>
-            {c.icon}
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="grid grid-cols-2 h-screen w-screen absolute left-0 top-0 place-self-center place-items-center">
+      <section>
+        <h1 className="text-2xl text-right">Tutoring Services</h1>
+        <h2 className="text-lg text-right">Software Development and Coding</h2>
+        <Separator className="my-8" />
+        <div className="flex h-5 items-center justify-center w-full gap-8 text-lg">
+          {threeRs.map((item, index) => (
+            <>
+              <HoverCard key={item.label}>
+                <HoverCardTrigger className="cursor-pointer">
+                  <Button
+                    className="!bg-transparent !outline-none"
+                    variant="link"
+                  >
+                    {item.label}
+                  </Button>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-fit flex gap-4">
+                  {item.icon}
+                  <div>
+                    <h3>Why?</h3>
+                    <ul className="text-sm">
+                      {item.points.map((point, pointIndex) => (
+                        <li
+                          key={pointIndex}
+                          className="flex items-center gap-2"
+                        >
+                          {item.bulletIcon}
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
+              {index < threeRs.length - 1 && (
+                <Separator orientation="vertical" />
+              )}
+            </>
+          ))}
+        </div>
+      </section>
+      <section className="group">
+        <div className="h-72 w-96 bg-[url('home-image-1.jpg')] bg-cover translate-y-1/4 rounded-xl duration-300 hover:opacity-100! group-hover:opacity-25" />
+
+        <div className="h-72 w-96 bg-[url('home-image-0.jpg')] bg-cover translate-x-1/4 -translate-y-1/4 rounded-xl duration-300 hover:opacity-100! group-hover:opacity-25" />
+      </section>
+    </div>
   );
 };
 

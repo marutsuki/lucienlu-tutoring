@@ -9,7 +9,7 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="grid place-items-center">{children}</main>
+      <main>{children}</main>
     </>
   );
 };

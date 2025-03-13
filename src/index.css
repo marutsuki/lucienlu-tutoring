@@ -166,8 +166,12 @@ button:focus-visible {
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
+  --bg-home-image-0: url('/home-image-0.jpg');
+  --bg-home-image-1: url('/home-image-1.jpg');
+
   --animate-slidein: slidein 1s ease-in-out forwards;
   --animate-slidein-right: slidein-right 1s ease-in-out forwards;
+
   @keyframes slidein {
     0% {
       opacity: 0%;
