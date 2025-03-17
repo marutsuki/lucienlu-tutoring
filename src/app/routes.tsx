@@ -6,6 +6,7 @@ import App from "@/app/routes/app/root";
 import NotFound from "@/app/routes/NotFound";
 import Home from "@/app/routes/app/Home";
 import Pricing from "@/app/routes/app/pricing/Pricing";
+import AboutMe from "@/app/routes/app/aboutme/AboutMe";
 
 const appRouter = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/aboutme",
-        element: <div>Hello World</div>,
+        element: <AboutMe />,
       },
       {
         path: "/pricing",
