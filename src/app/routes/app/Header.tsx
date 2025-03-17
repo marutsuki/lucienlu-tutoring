@@ -17,11 +17,15 @@ const components: { label: string; href: string }[] = [
     label: "About Me",
     href: "/aboutme",
   },
+  {
+    label: "Pricing",
+    href: "/pricing",
+  },
 ];
 
 const Header: FC = () => {
   return (
-    <header className="flex justify-end px-24 py-6">
+    <header className="relative z-50 flex justify-end px-24 py-6">
       <NavigationMenu>
         <NavigationMenuList>
           {components.map((c) => (

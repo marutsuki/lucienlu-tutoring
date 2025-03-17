@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
-import ErrorBoundary from "./routes/app/ErrorBoundary";
-import App from "./routes/app/root";
-import NotFound from "./routes/NotFound";
-import Home from "./routes/app/Home";
+import ErrorBoundary from "@/app/routes/app/ErrorBoundary";
+import App from "@/app/routes/app/root";
+import NotFound from "@/app/routes/NotFound";
+import Home from "@/app/routes/app/Home";
+import Pricing from "@/app/routes/app/pricing/Pricing";
 
 const appRouter = createBrowserRouter([
   {
@@ -16,11 +17,15 @@ const appRouter = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      {
+        path: "/aboutme",
+        element: <div>Hello World</div>,
+      },
+      {
+        path: "/pricing",
+        element: <Pricing />,
+      },
     ],
-  },
-  {
-    path: "/aboutme",
-    element: <div>Hello World</div>,
   },
   {
     path: "*",
