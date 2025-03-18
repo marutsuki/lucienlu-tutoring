@@ -6,8 +6,6 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FC } from "react";
 import { FaDollarSign } from "react-icons/fa";

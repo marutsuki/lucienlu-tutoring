@@ -41,7 +41,7 @@ const MAX_QUOTE_LEN = 250;
 const AboutMe: React.FC = () => {
   const [expanded, setExpanded] = useState(quotes.map(() => false));
   return (
-    <section className="flex gap-24 justify-center items-center">
+    <section className="flex gap-24 justify-center items-center m-16">
       <div className="flex flex-col gap-4">
         <h2 className="text-lg">Testimonials</h2>
         {quotes.map((quote, index) => (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { routeComponents } from "@/app/routes";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -8,21 +8,6 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { FC } from "react";
-
-const components: { label: string; href: string }[] = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "About Me",
-    href: "/aboutme",
-  },
-  {
-    label: "Pricing",
-    href: "/pricing",
-  },
-];
 
 const Header: FC = () => {
   return (
@@ -33,7 +18,7 @@ const Header: FC = () => {
       </section>
       <NavigationMenu>
         <NavigationMenuList className="flex gap-4">
-          {components.map((c) => (
+          {routeComponents.map((c) => (
             <NavigationMenuItem key={"navbar-item-" + c.href}>
               <NavigationMenuLink
                 className="text-base cursor-pointer transition duration-200"

@@ -8,6 +8,21 @@ import Home from "@/app/routes/app/Home";
 import Pricing from "@/app/routes/app/pricing/Pricing";
 import AboutMe from "@/app/routes/app/aboutme/AboutMe";
 
+export const routeComponents: { label: string; href: string }[] = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About Me",
+    href: "/aboutme",
+  },
+  {
+    label: "Pricing",
+    href: "/pricing",
+  },
+];
+
 const appRouter = createBrowserRouter([
   {
     path: "/",

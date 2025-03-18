@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 type AppLayoutProps = {
   children: ReactNode | ReactNode[];
@@ -7,10 +8,13 @@ type AppLayoutProps = {
 
 const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
-    <>
-      <Header />
-      <main>{children}</main>
-    </>
+    <div>
+      <div className="flex flex-col h-screen">
+        <Header />
+        <main className="flex-1">{children}</main>
+      </div>
+      <Footer />
+    </div>
   );
 };
 

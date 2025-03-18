@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { FC } from "react";
 import PricingCard from "./PricingCard";
 
@@ -76,7 +75,7 @@ const offers: Offer[] = [
 
 const Pricing: FC = () => {
   return (
-    <div className="flex flex-col gap-4 p-4">
+    <div className="flex flex-col gap-4 p-4 m-16">
       <section>
         <h1 className="text-2xl text-center">Pricing</h1>
         <p className="text-center text-muted-foreground">

@@ -51,7 +51,7 @@ const threeRs: Component[] & { length: 3 } = [
 ];
 const Home: FC = () => {
   return (
-    <div className="grid grid-cols-2 h-screen w-screen absolute left-0 top-0 place-self-center place-items-center">
+    <div className="grid grid-cols-2 m-16 w-[80vw] left-0 top-0 place-self-center place-items-center">
       <section>
         <h1 className="text-2xl text-right">Tutoring Services</h1>
         <h2 className="text-lg text-right">Software Development and Coding</h2>
