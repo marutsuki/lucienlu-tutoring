@@ -1,4 +1,5 @@
 import { FC, Suspense } from "react";
+import ThemeProvider from "./theme";
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -6,15 +7,17 @@ type AppProviderProps = {
 
 const AppProvider: FC<AppProviderProps> = ({ children }) => {
   return (
-    <Suspense
-      fallback={
-        <div className="flex h-screen w-screen items-center justify-center">
-          Loading...
-        </div>
-      }
-    >
-      {children}
-    </Suspense>
+    <ThemeProvider>
+      <Suspense
+        fallback={
+          <div className="flex h-screen w-screen items-center justify-center">
+            Loading...
+          </div>
+        }
+      >
+        {children}
+      </Suspense>
+    </ThemeProvider>
   );
 };
 

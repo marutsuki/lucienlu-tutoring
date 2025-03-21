@@ -20,11 +20,10 @@ const MockBrowser: FC<{
         <span className="w-3 h-3 bg-green-500 rounded-full"></span>
         {title && <span className="flex-1 ml-0.5 text-sm">{title}</span>}
       </div>
-      <div className="bg-gray-100 p-2 rounded-md">{children}</div>
+      <div className="bg-background p-2 rounded-md">{children}</div>
     </section>
   );
 };
-
 const TutoringServicePage: FC<TutoringServicePageProps> = ({
   name,
   description,

@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { routeComponents } from "@/config/routing.config";
 import { FC } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header: FC = () => {
   return (
@@ -25,13 +26,16 @@ const Header: FC = () => {
                 href={c.href}
                 asChild
               >
-                <a className="text-black! hover:underline! underline-offset-4">
+                <a className="hover:underline! underline-offset-4 text-foreground">
                   {c.label}
                 </a>
               </NavigationMenuLink>
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
+        <span className="mx-2">
+          <ThemeToggle />
+        </span>
       </NavigationMenu>
     </header>
   );
