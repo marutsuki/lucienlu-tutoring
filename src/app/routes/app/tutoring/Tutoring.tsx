@@ -6,7 +6,6 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Slash } from "lucide-react";
@@ -27,8 +26,11 @@ const Tutoring: FC = () => {
 
   return (
     <div className="m-8">
-      <Breadcrumb className="py-8">
+      <Breadcrumb className="py-4">
         <BreadcrumbList>
+          <BreadcrumbSeparator>
+            <Slash />
+          </BreadcrumbSeparator>
           {components.map((component, index) => (
             <>
               <BreadcrumbItem key={component}>

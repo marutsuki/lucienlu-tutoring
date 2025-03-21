@@ -1,10 +1,10 @@
-import { routeComponents } from "@/app/routes";
+import { routeComponents } from "@/config/routing.config";
 import { FC } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer: FC = () => {
   return (
-    <footer className="bg-gray-800 text-white text-center py-6 px-24 w-full flex justify-between">
+    <footer className="relative bg-gray-800 text-white text-center py-6 px-24 w-full flex justify-between">
       <section>
         <p className="text-xs">Copyright © 2025 Marutsuki.</p>
       </section>

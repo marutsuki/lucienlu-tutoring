@@ -1,12 +1,12 @@
 "use client";
 
-import { routeComponents } from "@/app/routes";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import { routeComponents } from "@/config/routing.config";
 import { FC } from "react";
 
 const Header: FC = () => {
