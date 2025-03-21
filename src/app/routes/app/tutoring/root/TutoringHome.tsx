@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { tutoringServices } from "@/config/tutoring.config";
+import clsx from "clsx";
 import { FC } from "react";
 import { useNavigate } from "react-router";
 
@@ -13,10 +14,13 @@ const TutoringHome: FC = () => {
           <h2 className="text-xl">{group.name}</h2>
           <Separator className="my-4" />
           <div className="flex gap-4 p-4">
-            {group.services.map((service) => (
+            {group.services.map((service, index) => (
               <Card
                 key={service.name}
-                className="w-64 h-96 relative p-0 cursor-pointer"
+                className={clsx("w-64 h-96 relative p-0 cursor-pointer", {
+                  "animate-slidein": index === 0,
+                  "animate-slidein-right": index > 0,
+                })}
                 onClick={() => navigate("/tutoring" + service.url)}
               >
                 <CardContent className="p-0">

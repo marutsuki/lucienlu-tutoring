@@ -52,7 +52,7 @@ const threeRs: Component[] & { length: 3 } = [
 const Home: FC = () => {
   return (
     <div className="grid grid-cols-2 m-16 w-[80vw] left-0 top-0 place-self-center place-items-center">
-      <section>
+      <section className=" animate-slidein">
         <h1 className="text-2xl text-right">Tutoring Services</h1>
         <h2 className="text-lg text-right">Software Development and Coding</h2>
         <Separator className="my-8" />
@@ -94,9 +94,9 @@ const Home: FC = () => {
         </div>
       </section>
       <section className="group">
-        <div className="h-72 w-96 bg-[url('home-image-1.jpg')] bg-cover translate-y-1/4 rounded-xl duration-300 hover:opacity-100! group-hover:opacity-25" />
+        <div className="animate-slidein h-72 w-96 bg-[url('home-image-1.jpg')] bg-cover translate-y-1/4 rounded-xl" />
 
-        <div className="h-72 w-96 bg-[url('home-image-0.jpg')] bg-cover translate-x-1/4 -translate-y-1/4 rounded-xl duration-300 hover:opacity-100! group-hover:opacity-25" />
+        <div className="animate-slidein-right h-72 w-96 bg-[url('home-image-0.jpg')] bg-cover translate-x-1/4 -translate-y-1/4 rounded-xl" />
       </section>
     </div>
   );

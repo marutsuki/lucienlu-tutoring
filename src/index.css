@@ -175,7 +175,7 @@ button:focus-visible {
   @keyframes slidein {
     0% {
       opacity: 0%;
-      transform: translateX(-100px);
+      transform: translateX(-50px);
     }
     100% {
       opacity: 100%;
@@ -186,7 +186,7 @@ button:focus-visible {
   @keyframes slidein-right {
     0% {
       opacity: 0%;
-      transform: translateX(100px);
+      transform: translateX(50px);
     }
     100% {
       opacity: 100%;

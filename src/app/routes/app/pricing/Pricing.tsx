@@ -1,5 +1,6 @@
 import { FC } from "react";
 import PricingCard from "./PricingCard";
+import clsx from "clsx";
 
 type Offer = {
   name: string;
@@ -90,7 +91,10 @@ const Pricing: FC = () => {
             name={offer.name}
             description={offer.description}
             notes={offer.features}
-            className="mr-4"
+            className={clsx("mr-4", {
+              "animate-slidein": index === 0,
+              "animate-slidein-right": index > 0,
+            })}
             price={offer.price}
           >
             {offer.name}

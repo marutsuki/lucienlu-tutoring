@@ -42,7 +42,7 @@ const AboutMe: React.FC = () => {
   const [expanded, setExpanded] = useState(quotes.map(() => false));
   return (
     <section className="flex gap-24 justify-center items-center m-16">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 animate-slidein">
         <h2 className="text-lg">Testimonials</h2>
         {quotes.map((quote, index) => (
           <div key={index} className="text-sm">
@@ -71,7 +71,7 @@ const AboutMe: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="w-96 flex flex-col gap-4">
+      <div className="w-96 flex flex-col gap-4 animate-slidein-right">
         <Avatar className="size-48">
           <AvatarImage className="object-cover" src="/profile.jpeg" />
           <AvatarFallback>Profile</AvatarFallback>
