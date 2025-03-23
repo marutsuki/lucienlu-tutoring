@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import { FC, ReactNode } from "react";
-import { FaBookOpen, FaCheck } from "react-icons/fa";
+import { FaBookOpen, FaCheck, FaLink } from "react-icons/fa";
 import { RiFeedbackFill } from "react-icons/ri";
 import { MdOutlineSentimentSatisfied } from "react-icons/md";
 import {
@@ -9,6 +9,8 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router";
+import TextScroller from "./TextScroller";
 
 type Component = {
   label: string;
@@ -49,24 +51,33 @@ const threeRs: Component[] & { length: 3 } = [
     bulletIcon: <FaCheck />,
   },
 ];
+
+const sellingPoints = [
+  "Structured courses targeted at various demographics.",
+  "A learning roadmap and outline designed for each individual.",
+  "Led by a tutor with over 4 years of industry experience.",
+  "Naterial and homework handcrafted by the tutor.",
+  "Led by a tutor with teaching experience at UniMelb.",
+];
+
 const Home: FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="grid grid-cols-2 m-16 w-[80vw] left-0 top-0 place-self-center place-items-center">
-      <section className=" animate-slidein">
+      <section className="animate-slidein">
+        <div className="my-4">
+          <TextScroller texts={sellingPoints} />
+        </div>
         <h1 className="text-2xl text-right">Tutoring Services</h1>
         <h2 className="text-lg text-right">Software Development and Coding</h2>
-        <Separator className="my-8" />
+        <Separator className="my-6" />
         <div className="flex h-5 items-center justify-center w-full gap-8 text-lg">
           {threeRs.map((item, index) => (
             <>
               <HoverCard key={item.label}>
-                <HoverCardTrigger className="cursor-pointer">
-                  <Button
-                    className="!bg-transparent !outline-none"
-                    variant="link"
-                  >
-                    {item.label}
-                  </Button>
+                <HoverCardTrigger asChild>
+                  <Button variant="link">{item.label}</Button>
                 </HoverCardTrigger>
                 <HoverCardContent className="w-fit flex gap-4">
                   {item.icon}
@@ -91,6 +102,19 @@ const Home: FC = () => {
               )}
             </>
           ))}
+        </div>
+        <div className="font-heading text-right text-xs">
+          Hover over these items
+        </div>
+        <div className="m-6 flex justify-center">
+          <Button
+            variant="outline"
+            className="cursor-pointer"
+            onClick={() => navigate("/tutoring")}
+          >
+            <FaLink />
+            See what I tutor
+          </Button>
         </div>
       </section>
       <section className="group">
