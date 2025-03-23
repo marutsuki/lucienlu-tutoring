@@ -4,11 +4,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer: FC = () => {
   return (
-    <footer className="relative bg-gray-800 text-white text-center py-6 px-24 w-full flex justify-between">
-      <section>
-        <p className="text-xs">Copyright © 2025 Marutsuki.</p>
+    <footer className="relative bg-gray-800 text-white text-center py-6 px-6 lg:px-24 w-full flex flex-col-reverse lg:flex-row justify-between">
+      <section className="my-2">
+        <p className="text-xs text-left">Copyright © 2025 Marutsuki.</p>
       </section>
-      <div className="text-end text-sm mr-48 flex gap-24">
+      <div className="text-end text-sm lg:mr-48 flex gap-12 lg:gap-24">
         <section className="text-start">
           <h3>Website Links</h3>
           <ul>
