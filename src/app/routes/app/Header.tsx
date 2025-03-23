@@ -28,7 +28,10 @@ const Header: FC = () => {
     <header className="relative z-50 flex justify-between px-4 lg:px-24 py-2 shadow-md">
       <section className="flex gap-4 items-center">
         <img className="size-12" src="/logo.png" alt="Logo" />
-        <h1 className="text-2xl font-heading">Soft Eng. Tutoring</h1>
+        <div className="flex flex-col">
+          <h1 className="text-2xl font-heading">Soft Eng. Tutoring</h1>
+          <h2 className="text-sm font-heading text-right">By Lucien Lu</h2>
+        </div>
       </section>
       <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList className="flex gap-4">

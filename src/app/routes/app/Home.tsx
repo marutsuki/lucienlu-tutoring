@@ -64,15 +64,15 @@ const Home: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="grid grid-cols-2 m-16 w-[80vw] left-0 top-0 place-self-center place-items-center">
-      <section className="animate-slidein">
+    <div className="grid lg:grid-cols-2 lg:m-16 h-full lg:w-3/4 place-self-center place-items-center">
+      <section className="animate-slidein flex flex-col justify-center my-8">
         <div className="my-4">
           <TextScroller texts={sellingPoints} />
         </div>
         <h1 className="text-2xl text-right">Tutoring Services</h1>
         <h2 className="text-lg text-right">Software Development and Coding</h2>
         <Separator className="my-6" />
-        <div className="flex h-5 items-center justify-center w-full gap-8 text-lg">
+        <div className="flex h-5 items-center justify-center w-full lg:gap-8 text-lg">
           {threeRs.map((item, index) => (
             <>
               <HoverCard key={item.label}>
@@ -117,7 +117,7 @@ const Home: FC = () => {
           </Button>
         </div>
       </section>
-      <section className="group">
+      <section className="group hidden lg:block">
         <div className="animate-slidein h-72 w-96 bg-[url('home-image-1.jpg')] bg-cover translate-y-1/4 rounded-xl" />
 
         <div className="animate-slidein-right h-72 w-96 bg-[url('home-image-0.jpg')] bg-cover translate-x-1/4 -translate-y-1/4 rounded-xl" />

@@ -44,7 +44,9 @@ const TextScroller: FC<TextScrollerProps> = ({ texts }) => {
         <FaTerminal />
         Heads up!
       </AlertTitle>
-      <AlertDescription className="min-h-5">{displayedText}</AlertDescription>
+      <AlertDescription className="min-h-10 lg:min-h-5 text-wrap w-56 lg:w-full">
+        {displayedText}
+      </AlertDescription>
     </Alert>
   );
 };
