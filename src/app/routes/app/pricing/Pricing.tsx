@@ -84,7 +84,7 @@ const Pricing: FC = () => {
         </p>
       </section>
 
-      <section className="flex gap-4 justify-center items-center">
+      <section className="flex flex-col lg:flex-row gap-4 justify-center items-center">
         {offers.map((offer, index) => (
           <PricingCard
             key={index}

@@ -13,7 +13,7 @@ const TutoringHome: FC = () => {
         <div>
           <h2 className="text-xl">{group.name}</h2>
           <Separator className="my-4" />
-          <div className="flex gap-4 p-4">
+          <div className="flex flex-col lg:flex-row items-center gap-4 p-4">
             {group.services.map((service, index) => (
               <Card
                 key={service.name}

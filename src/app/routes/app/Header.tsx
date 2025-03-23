@@ -25,7 +25,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header: FC = () => {
   return (
-    <header className="relative z-50 flex justify-between px-4 lg:px-24 py-2 shadow-md">
+    <header className="sticky top-0 z-50 flex justify-between px-4 lg:px-24 py-2 shadow-md bg-white">
       <section className="flex gap-4 items-center">
         <img className="size-12" src="/logo.png" alt="Logo" />
         <div className="flex flex-col">

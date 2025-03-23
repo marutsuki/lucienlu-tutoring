@@ -7,8 +7,8 @@ import AvailabilityTable from "./AvailabilityTable";
 
 const Contact: FC = () => {
   return (
-    <section className="h-full grid grid-cols-2 place-items-center p-12">
-      <div className="max-w-96 m-24 animate-slidein">
+    <section className="h-full flex flex-col-reverse lg:grid lg:grid-cols-2 place-items-center p-12">
+      <div className="max-w-96 my-8 lg:m-24 animate-slidein">
         <h2 className="text-lg font-bold">Cancellation Policy</h2>
         <p>
           Please notify me of lesson cancellation 24 hours before the scheduled
@@ -43,7 +43,7 @@ const Contact: FC = () => {
           </div>
         </p>
       </div>
-      <div className="flex gap-8 animate-slidein-right">
+      <div className="flex flex-col lg:flex-row gap-8 animate-slidein-right">
         <Card className="max-w-96 shadow-lg">
           <CardContent className="flex flex-col gap-2">
             <img

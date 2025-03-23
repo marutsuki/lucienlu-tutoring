@@ -27,7 +27,7 @@ const PricingCard: FC<CardProps> = ({
   ...props
 }) => {
   return (
-    <Card className={cn("w-[380px]", className)} {...props}>
+    <Card className={cn("w-80 lg:w-96", className)} {...props}>
       <CardHeader>
         <CardTitle className="text-xl">{name}</CardTitle>
         <CardDescription className="h-10">{description}</CardDescription>
