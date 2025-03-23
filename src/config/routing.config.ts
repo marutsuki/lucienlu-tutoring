@@ -15,4 +15,8 @@ export const routeComponents: { label: string; href: string }[] = [
     label: "Tutoring",
     href: "/tutoring",
   },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
 ];

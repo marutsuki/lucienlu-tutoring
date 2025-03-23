@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -131,6 +131,8 @@
   --animate-slidein: slidein 1s ease-in-out forwards;
   --animate-slidein-right: slidein-right 1s ease-in-out forwards;
 
+  --font-heading: Jura, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-main: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
   @keyframes slidein {
     0% {
       opacity: 0%;

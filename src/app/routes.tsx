@@ -11,6 +11,7 @@ import Tutoring from "@/app/routes/app/tutoring/Tutoring";
 import TutoringServicePage from "./routes/app/tutoring/service/TutoringServicePage";
 import TutoringHome from "./routes/app/tutoring/root/TutoringHome";
 import { tutoringServices } from "@/config/tutoring.config";
+import Contact from "./routes/app/contact/Contact";
 
 const appRouter = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const appRouter = createBrowserRouter([
             element: <TutoringHome />,
           },
         ],
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },

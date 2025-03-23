@@ -22,9 +22,7 @@ const quotes: Quote[] = [
 
 Lucien has a strong grasp of various programming languages and frameworks, and his ability to quickly learn new technologies is truly remarkable. He approaches challenges with a positive attitude and a creative mindset, often coming up with innovative solutions that greatly enhance our projects.
 
-Beyond his technical prowess, Lucien is an excellent team player. He communicates effectively with peers and is always willing to lend a hand or share his knowledge. His collaborative spirit fosters a positive work environment and encourages others to excel.
-
-I have no doubt that Lucien will continue to achieve great success in his career. He has the talent, drive, and work ethic that will make him a valuable asset to any team. I wholeheartedly recommend him for any software engineering opportunity.`,
+Beyond his technical prowess, Lucien is an excellent team player. He communicates effectively with peers and is always willing to lend a hand or share his knowledge. His collaborative spirit fosters a positive work environment and encourages others to excel.`,
   },
 ];
 
