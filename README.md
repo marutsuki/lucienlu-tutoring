@@ -36,7 +36,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any inquiries or further information, please contact me at:
 
-- **Email**: lucienlu@example.com
-- **LinkedIn**: [LucienLu](https://www.linkedin.com/in/lucienlu)
+- **Email**: lucienlu2000@gmail.com
+- **LinkedIn**: [LucienLu](https://www.linkedin.com/in/lucienlu7789)
 
 Thank you for visiting the LucienLu Tutoring project! We look forward to helping you achieve your software engineering goals.
