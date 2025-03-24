@@ -26,7 +26,7 @@ To get started with the project, follow these steps:
   npm run dev
   ```
 
-5. **Open your browser** and visit `http://localhost:3000` to see the application in action.
+5. **Open your browser** and visit `http://localhost:5173` to see the application in action.
 
 ## License
 
