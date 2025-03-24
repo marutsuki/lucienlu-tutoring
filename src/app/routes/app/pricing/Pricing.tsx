@@ -91,7 +91,7 @@ const Pricing: FC = () => {
             name={offer.name}
             description={offer.description}
             notes={offer.features}
-            className={clsx("mr-4", {
+            className={clsx({
               "animate-slidein": index === 0,
               "animate-slidein-right": index > 0,
             })}

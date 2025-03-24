@@ -64,7 +64,7 @@ const Home: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="grid lg:grid-cols-2 lg:m-16 h-full lg:w-3/4 place-self-center place-items-center">
+    <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:m-16 h-full lg:w-3/4 place-self-center place-items-center">
       <section className="animate-slidein flex flex-col justify-center my-8">
         <div className="my-4">
           <TextScroller texts={sellingPoints} />
@@ -117,10 +117,10 @@ const Home: FC = () => {
           </Button>
         </div>
       </section>
-      <section className="group hidden lg:block">
-        <div className="animate-slidein h-72 w-96 bg-[url('home-image-1.jpg')] bg-cover translate-y-1/4 rounded-xl" />
+      <section className="group lg:block m-8">
+        <div className="hidden lg:block animate-slidein h-72 w-96 bg-[url('home-image-1.jpg')] bg-cover -translate-x-1/4 translate-y-1/4 rounded-xl" />
 
-        <div className="animate-slidein-right h-72 w-96 bg-[url('home-image-0.jpg')] bg-cover translate-x-1/4 -translate-y-1/4 rounded-xl" />
+        <div className="animate-slidein-right h-60 w-80 lg:h-72 lg:w-96 bg-[url('home-image-0.jpg')] bg-cover lg:-translate-y-1/4 rounded-xl" />
       </section>
     </div>
   );
