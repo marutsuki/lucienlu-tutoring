@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { tutoringServices } from "@/config/tutoring.config";
 import clsx from "clsx";
@@ -8,7 +9,7 @@ import { useNavigate } from "react-router";
 const TutoringHome: FC = () => {
   const navigate = useNavigate();
   return (
-    <div className="relative h-[80vh] overflow-y-auto">
+    <ScrollArea className="relative h-[80vh] overflow-y-auto">
       {tutoringServices.map((group) => (
         <div>
           <h2 className="text-xl">{group.name}</h2>
@@ -38,7 +39,7 @@ const TutoringHome: FC = () => {
           </div>
         </div>
       ))}
-    </div>
+    </ScrollArea>
   );
 };
 
