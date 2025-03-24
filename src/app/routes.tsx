@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
 import ErrorBoundary from "@/app/routes/app/ErrorBoundary";
@@ -13,7 +13,7 @@ import TutoringHome from "./routes/app/tutoring/root/TutoringHome";
 import { tutoringServices } from "@/config/tutoring.config";
 import Contact from "./routes/app/contact/Contact";
 
-const appRouter = createBrowserRouter([
+const appRouter = createHashRouter([
   {
     path: "/",
     element: <App />,

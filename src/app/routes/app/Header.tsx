@@ -22,8 +22,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from "react-router";
 
 const Header: FC = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="sticky top-0 z-50 flex justify-between px-4 lg:px-24 py-2 shadow-md bg-white">
       <section className="flex gap-4 items-center">
@@ -39,7 +42,7 @@ const Header: FC = () => {
             <NavigationMenuItem key={"navbar-item-" + c.href}>
               <NavigationMenuLink
                 className="text-lg cursor-pointer transition duration-200"
-                href={c.href}
+                onClick={() => navigate(c.href)}
                 asChild
               >
                 <a className="hover:underline! underline-offset-4 text-foreground font-heading">
