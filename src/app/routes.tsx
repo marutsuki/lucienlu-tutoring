@@ -48,7 +48,7 @@ const appRouter = createHashRouter([
         ],
       },
       {
-        path: "contact",
+        path: "/contact",
         element: <Contact />,
       },
     ],

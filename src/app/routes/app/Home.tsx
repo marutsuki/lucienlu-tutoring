@@ -118,9 +118,9 @@ const Home: FC = () => {
         </div>
       </section>
       <section className="group lg:block m-8">
-        <div className="hidden lg:block animate-slidein h-72 w-96 bg-[url('home-image-1.jpg')] bg-cover -translate-x-1/4 translate-y-1/4 rounded-xl" />
+        <div className="hidden lg:block animate-slidein h-72 w-96 bg-[url('/home-image-1.jpg')] bg-cover -translate-x-1/4 translate-y-1/4 rounded-xl" />
 
-        <div className="animate-slidein-right h-60 w-80 lg:h-72 lg:w-96 bg-[url('home-image-0.jpg')] bg-cover lg:-translate-y-1/4 rounded-xl" />
+        <div className="animate-slidein-right h-60 w-80 lg:h-72 lg:w-96 bg-[url('/home-image-0.jpg')] bg-cover lg:-translate-y-1/4 rounded-xl" />
       </section>
     </div>
   );
