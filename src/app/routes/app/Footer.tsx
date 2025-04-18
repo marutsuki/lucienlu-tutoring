@@ -1,8 +1,10 @@
 import { routeComponents } from "@/config/routing.config";
 import { FC } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 const Footer: FC = () => {
+  const navigate = useNavigate();
   return (
     <footer className="relative bg-gray-800 text-white text-center py-6 px-6 lg:px-24 w-full flex flex-col-reverse lg:flex-row justify-between">
       <section className="my-2">
@@ -17,7 +19,7 @@ const Footer: FC = () => {
                 <a
                   key={"footer-item-" + c.href}
                   className="cursor-pointer text-white! underline! text-xs"
-                  href={c.href}
+                  onClick={() => navigate(c.href)}
                 >
                   {c.label}
                 </a>
