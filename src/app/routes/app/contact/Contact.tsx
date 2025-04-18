@@ -12,7 +12,8 @@ const Contact: FC = () => {
         <h2 className="text-lg font-bold">Cancellation Policy</h2>
         <p>
           Please notify me of lesson cancellation 24 hours before the scheduled
-          time. Otherwise, a cancellation fee will be charged.
+          time. Otherwise, a cancellation fee of half the lesson price will be
+          charged.
         </p>
         <Separator className="m-4" />
         <h2 className="text-lg font-bold">Lesson Bookings</h2>

@@ -73,7 +73,7 @@ const Header: FC = () => {
                 <NavigationMenuItem key={"navbar-item-" + c.href}>
                   <NavigationMenuLink
                     className="text-lg cursor-pointer transition duration-200"
-                    href={c.href}
+                    onClick={() => navigate(c.href)}
                     asChild
                   >
                     <a className="text-left underline-offset-4 text-foreground font-heading">
